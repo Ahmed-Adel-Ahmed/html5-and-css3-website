@@ -1,0 +1,128 @@
+.contact-layout {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden; 
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); 
+  min-height: 550px;
+}
+
+.contact-info {
+  flex: 1;
+  padding: 50px 40px;
+  background: linear-gradient(135deg, #1b4332 0%, #143628 100%);
+  color: #f8f9f5;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, #d4af37, transparent);
+  opacity: 0.3;
+}
+
+.info-item {
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 50px; 
+}
+
+.info-item::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(212, 175, 55, 0.1); 
+  color: #d4af37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.info-item:nth-child(1)::before {
+  content: "📍";
+} 
+.info-item:nth-child(2)::before {
+  content: "✉️";
+} 
+.info-item:nth-child(3)::before {
+  content: "📞";
+} 
+
+.info-item h4 {
+  color: #d4af37; 
+  margin-bottom: 8px;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.info-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.contact-form {
+  flex: 1.5; 
+  padding: 50px;
+  background-color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #3a5a40;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  color: #2d2d2d;
+  font-size: 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #d4af37; 
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1); 
+}
+
+textarea.form-control {
+  resize: none;
+  height: 140px;
+}
+
+.contact-form .btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
