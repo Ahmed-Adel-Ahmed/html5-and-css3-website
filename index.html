@@ -21,9 +21,9 @@
           </ul>
         </nav>
 
-        <a href="cart.html" class="btn-outline"
-          >My Bag (<span id="header-cart-count">0</span>)</a
-        >
+        <a href="cart.html" class="btn-outline">
+          My Bag (<span id="header-cart-count">0</span>)
+        </a>
       </header>
 
       <section class="hero">
@@ -37,9 +37,24 @@
 
       <section id="shop" class="page-section">
         <h2>Rare Arrivals</h2>
+
+        <div class="filter-container">
+          <button class="filter-btn active" onclick="filterSelection('all')">
+            All
+          </button>
+          <button class="filter-btn" onclick="filterSelection('best-seller')">
+            Best Sellers
+          </button>
+          <button class="filter-btn" onclick="filterSelection('new')">
+            New
+          </button>
+          <button class="filter-btn" onclick="filterSelection('limited')">
+            Limited
+          </button>
+        </div>
+
         <div class="product-grid">
-          <!-- Product 1 -->
-          <div class="product-card">
+          <div class="product-card" data-category="best-seller">
             <span class="badge">Best Seller</span>
             <img
               src="1.avif"
@@ -52,8 +67,8 @@
               <a href="#" class="btn-outline">Add to Cart</a>
             </div>
           </div>
-          <!-- Product 2 -->
-          <div class="product-card">
+
+          <div class="product-card" data-category="limited">
             <span class="badge">Limited</span>
             <img
               src="2.avif"
@@ -66,8 +81,8 @@
               <a href="#" class="btn-outline">Add to Cart</a>
             </div>
           </div>
-          <!-- Product 3 -->
-          <div class="product-card">
+
+          <div class="product-card" data-category="new">
             <span class="badge">New</span>
             <img src="3.webp" alt="Black Fern" class="product-img img-black" />
             <div class="product-info">
@@ -76,8 +91,9 @@
               <a href="#" class="btn-outline">Add to Cart</a>
             </div>
           </div>
-          <!-- Product 4 -->
-          <div class="product-card">
+
+          <!-- Product 4: Limited -->
+          <div class="product-card" data-category="limited">
             <img
               src="4.jpeg"
               alt="Ghost Orchid"
@@ -90,8 +106,8 @@
               <a href="#" class="btn-outline">Add to Cart</a>
             </div>
           </div>
-          <!-- Product 5 -->
-          <div class="product-card">
+
+          <div class="product-card" data-category="best-seller">
             <img
               src="5.webp"
               alt="Golden Ivy"
@@ -104,8 +120,8 @@
               <a href="#" class="btn-outline">Add to Cart</a>
             </div>
           </div>
-          <!-- Product 6 -->
-          <div class="product-card">
+
+          <div class="product-card" data-category="new">
             <img
               src="6.avif"
               alt="Teal Cactus"

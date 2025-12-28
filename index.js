@@ -17,7 +17,7 @@ const addButtons = document.querySelectorAll(".product-card .btn-outline");
 
 addButtons.forEach((btn) => {
   btn.addEventListener("click", function (e) {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const card = this.closest(".product-card");
     const title = card.querySelector(".product-title").innerText;
@@ -59,3 +59,32 @@ addButtons.forEach((btn) => {
     alert(`${title} added to your bag!`);
   });
 });
+
+function filterSelection(category) {
+  const cards = document.querySelectorAll(".product-card");
+  const buttons = document.querySelectorAll(".filter-btn");
+
+  if (typeof event !== "undefined" && event.target) {
+    buttons.forEach((btn) => btn.classList.remove("active"));
+    if (event.target.classList.contains("filter-btn")) {
+      event.target.classList.add("active");
+    }
+  }
+
+  cards.forEach((card) => {
+    card.classList.remove("show");
+    const cardCategory = card.getAttribute("data-category");
+
+    if (category === "all") {
+      card.style.display = "block";
+      setTimeout(() => card.classList.add("show"), 10);
+    } else {
+      if (cardCategory === category) {
+        card.style.display = "block";
+        setTimeout(() => card.classList.add("show"), 10);
+      } else {
+        card.style.display = "none";
+      }
+    }
+  });
+}
